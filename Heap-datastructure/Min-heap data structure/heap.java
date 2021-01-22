@@ -89,6 +89,7 @@ public class heap {
         }
     }
 
+    // this is function which will be used to insert the element
     public void insert(int element) {
         if (size >= maxSize)
             return;
@@ -102,12 +103,15 @@ public class heap {
 
     }
 
+    // this function will help in maintaining the condition of of min heap by
+    // calling heapify function
     public void minHeap() {
         for (int pos = (size) / 2; pos >= 1; pos--) {
             heapify(pos);
         }
     }
 
+    // this function will be used to remove the element
     public int remove() {
         int popped = heap[front];
         heap[front] = heap[size--];
@@ -116,4 +120,4 @@ public class heap {
     }
 
 }
-// function to build the min heap using the heapify()
+
